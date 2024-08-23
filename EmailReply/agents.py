@@ -4,7 +4,7 @@ from EmailReply import GROQ_LLM, search_tool
 
 class EmailAgents:
     @staticmethod
-    def make_categorizer_agent(self):
+    def make_categorizer_agent():
         return Agent(
             role='Email Categorizer Agent',
             goal="""Take an email to our company and categorize it into one of the following:
@@ -22,7 +22,7 @@ class EmailAgents:
         )
     
     @staticmethod
-    def make_researcher_agent(self):
+    def make_researcher_agent():
         return Agent(
             role='Info Researcher Agent',
             goal="""Take an email to our company along with email category and decide what info you need to search to reply to the email in a thoughtful and helpful way.
@@ -39,7 +39,7 @@ class EmailAgents:
         )
     
     @staticmethod
-    def make_email_writer_agent(self):
+    def make_email_writer_agent():
         return Agent(
             role='Email Writer Agent',
             goal="""Take an email to our company, the email's category and info from the research agent and write a helpful email in a thoughtful and friendly way.

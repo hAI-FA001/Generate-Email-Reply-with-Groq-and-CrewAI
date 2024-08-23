@@ -25,3 +25,4 @@ if __name__ == "__main__":
     results = crew.kickoff(inputs={"email_content": EMAIL})
     print(f"\n\n\nCrewAI Results: {results}")
     print(f"\n\nUsage Metrics: {crew.usage_metrics}")
+
