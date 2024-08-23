@@ -2,7 +2,7 @@
 
 <a href="https://www.youtube.com/watch?v=1D4YoAUpjlg">Tutorial followed.</a>
 
-<br> Changes from the tutorial:
+## Changes from the tutorial:
 
 - Fixed usage of duckduckgo search tool
   - LLM was unable to provide correct inputs to the tool
@@ -18,3 +18,22 @@
 - used `@staticmethod` for the methods in `EmailAgents` and `EmailTasks` classes
   - these methods don't need/work on instances of `EmailAgents` or `EmailTasks`
 - Slightly changed the inputs provided to `Agent` and `Task` constructors
+
+## Agents
+
+### Categorizer Agent:
+
+- Categorizes emails into one of:
+  - price_enquiry
+  - customer_complaint
+  - product_enquiry
+  - customer_feedback
+  - off_topic
+
+### Researcher Agent:
+
+- Searches the Internet for information if required using duckduckgo search tool
+
+### Email Writer Agent:
+
+- Writes the final reply to the email
