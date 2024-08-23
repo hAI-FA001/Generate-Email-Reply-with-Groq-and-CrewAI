@@ -14,15 +14,4 @@ search_tool = Tool(
     func=search_tool.run
 )
 
-
-EMAIL = """HI there,
-I am emailing to say that the resort weather was way to cloudy and overcast.
-I wanted to write a song called 'Here comes the sun but it never came'
-
-What should be the weather in Arizona in April?
-
-I really hope you fix this next time.
-
-Thanks,
-George
-"""
+EMAIL = os.environ['EMAIL']

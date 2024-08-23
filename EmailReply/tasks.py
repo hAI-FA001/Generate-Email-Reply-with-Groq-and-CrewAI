@@ -1,7 +1,8 @@
 from crewai import Task
 
 
-class EmailTasks():
+class EmailTasks:
+    @staticmethod
     def categorize_email(self, agent):
         return Task(
             description="""Conduct a comprehensive analysis of the email and categorize into one of the following categories:
@@ -22,6 +23,7 @@ class EmailTasks():
             agent=agent
         )
     
+    @staticmethod
     def research_info_for_email(self, agent, categorize_email_task):
         return Task(
             description="""Conduct a comprehensive analysis of the provided email and the email's category, and search the web to find info needed to respond to the email
@@ -38,6 +40,7 @@ class EmailTasks():
             agent=agent
         )
     
+    @staticmethod
     def draft_email(self, agent, categorize_email_task, research_info_for_email_task):
         return Task(
             description="""Conduct a comprehensive analysis of the provided email, category and info from the research specialist to write an email.

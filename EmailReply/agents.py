@@ -2,7 +2,8 @@ from crewai import Agent
 from EmailReply import GROQ_LLM, search_tool
 
 
-class EmailAgents():
+class EmailAgents:
+    @staticmethod
     def make_categorizer_agent(self):
         return Agent(
             role='Email Categorizer Agent',
@@ -20,6 +21,7 @@ class EmailAgents():
             memory=True,
         )
     
+    @staticmethod
     def make_researcher_agent(self):
         return Agent(
             role='Info Researcher Agent',
@@ -36,6 +38,7 @@ class EmailAgents():
             tools=[search_tool],
         )
     
+    @staticmethod
     def make_email_writer_agent(self):
         return Agent(
             role='Email Writer Agent',
